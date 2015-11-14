@@ -1,0 +1,17 @@
+{
+    "contents" : "start.time = 0\n\nloadTrainInBigMatrix = function(){\n  library(bigmemory)\n  \n  if (!exists(\"train\"))\n    train = attach.big.matrix(\"/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Data/Raw/rainTrain.desc\") \n  return(train)\n}\n\nstart.log = function(){\n  gc(reset = T)\n  start.time<-proc.time()\n}\n\n\nend.log = function(){\n  end.time<-proc.time()\n  save.time<-end.time-start.time\n  cat(\"\\n Number of minutes running:\", save.time[3]/60, \"\\n\\n\")\n  gc()\n}\n",
+    "created" : 1447081730547.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2577280498",
+    "id" : "800D854B",
+    "lastKnownWriteTime" : 1447083023,
+    "path" : "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Code/Raw/Functions.R",
+    "project_path" : "Code/Raw/Functions.R",
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

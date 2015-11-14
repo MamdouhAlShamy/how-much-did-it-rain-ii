@@ -1,0 +1,32 @@
+RhoHV
+	Correlation Coefficient
+	
+	Range 		0 - 1.05
+	
+	HI 			uniform Area (if X, all X)
+	LO			mixture (may b X & Y & ..)
+
+	1 			Dry Snow
+	=> 0.95		uniform
+	0.8 - 0.95	mix
+	0.8			hail or snow flakes
+
+
+
+Zdr
+	diff Reflectivity
+	abs diff bet H & V reflectivity
+	
+	Range 		-8 - 8
+
+	0 			Sphere
+	+			H dominates
+	-			V dominates
+	+3 			Big drops in raing situation
+
+Kdr 
+	Specific diff phase
+	
+	Range 		-2 - 10
+	
+	info 		+1 heavy Rain

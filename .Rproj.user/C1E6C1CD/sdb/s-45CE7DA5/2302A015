@@ -1,0 +1,17 @@
+{
+    "contents" : "normal = c(0.03123333, 0.00075 , 0.007366667, 0.1255, 6.46045 )\nparallel = c(0.00135 , 0.002533333 , 0.007366667 , 0.1396833 , 5.031533)\nmulti\nn = c(10, 100, 1000, 10000, 100000)\nplot(n, normal, type= \"o\", col= \"blue\")\nlines(n, parallel, col=\"green\", type=\"o\")\n",
+    "created" : 1447080538713.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1932494903",
+    "id" : "2302A015",
+    "lastKnownWriteTime" : 1447070987,
+    "path" : "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Code/Raw/plot_normal_vs_parallel_time.r",
+    "project_path" : "Code/Raw/plot_normal_vs_parallel_time.r",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

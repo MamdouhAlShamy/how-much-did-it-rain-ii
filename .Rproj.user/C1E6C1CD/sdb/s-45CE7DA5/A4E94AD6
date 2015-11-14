@@ -1,0 +1,18 @@
+{
+    "contents" : "## get Number of observations for each Id\nsource(\"Code/Raw/Functions.R\")\n\ntrain = loadTrainInBigMatrix()\n\nif (!identical(getDoParName(), 'doMPI')) {\n  cl <- startMPIcluster()\n  registerDoMPI(cl)\n}\n\ngc(reset = T)\nstart.time<-proc.time()\nm = matrix(byrow = T, nrow = n)\nx = train[1:n, ]\n\nm = foreach(i = 1:n) %dopar% {\n  sum(x[, \"Id\"] == i)\n}\nend.time<-proc.time()\nsave.time<-end.time-start.time\ncat(\"FOREACH_MCMS >> Number of minutes running:\", save.time[3]/60, \"\\n\")\n",
+    "created" : 1447081658990.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "32576062",
+    "id" : "A4E94AD6",
+    "lastKnownWriteTime" : 1447083189,
+    "path" : "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Code/Raw/summarySeed.r",
+    "project_path" : "Code/Raw/summarySeed.r",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

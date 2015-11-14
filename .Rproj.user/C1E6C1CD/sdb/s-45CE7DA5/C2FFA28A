@@ -1,0 +1,17 @@
+{
+    "contents" : "# read Train -only made once-\nlibrary(bigmemory)\n\ntrain = read.big.matrix(\"Data/Raw/train.csv\"\n                , header = T\n                , backingfile = \"rainTrain.bin\"\n                , descriptorfile = \"rainTrain.desc\"\n                , type = \"integer\")\n",
+    "created" : 1447080760026.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4193628812",
+    "id" : "C2FFA28A",
+    "lastKnownWriteTime" : 1447081755,
+    "path" : "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Code/Raw/readTrainAsBigMatrix.r",
+    "project_path" : "Code/Raw/readTrainAsBigMatrix.r",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,63 @@
+The training data consists of NEXRAD and MADIS data collected on 20 days between Apr and Aug 2014 over midwestern corn-growing states. Time and location information have been censored, and the data have been shuffled so that they are not ordered by time or place. The test data consists of data from the same radars and gauges over the remaining days in that month. Please see this page to understand more about polarimetric radar measurements.
+File descriptions
+
+    *train.zip - the training set.  This consists of radar observations at gauges in the Midwestern US over 20 days each month during the corn growing season. You are also provided the gauge observation at the end of each hour.
+    
+    *test.zip - the test set.  This consists of radar observations at gauges in the Midwestern US over the remaining 10/11 days each month of the same year(s) as the training set.  You are required to predict the gauge observation at the end of each hour.
+    
+    *sample_solution.zip - a sample submission file in the correct format
+    
+    *sample_dask.py - Example program in Python that will produce the sample submission file.  This program applies the Marshall-Palmer relationship to the radar observations to predict the gauge observation.
+
+
+Data columns
+----------------------------
+To understand the data, you have to realize that there are multiple radar observations over the course of an hour, and only one gauge observation (the 'Expected'). That is why there are multiple rows with the same 'Id'.
+
+The columns in the datasets are:
+
+    1)  Id:  A unique number for the set of observations over an hour at a gauge.
+    2)  minutes_past:  For each set of radar observations, the minutes past the top of the hour that the radar observations were carried out.  Radar observations are snapshots at that point in time.
+    3)  radardist_km:  Distance of gauge from the radar whose observations are being reported.
+    
+    4)  Ref:  Radar reflectivity in km (dBZ)
+    
+    5)  Ref_5x5_10th:   10th percentile of reflectivity values in 5x5 neighborhood around the gauge.
+        
+    6)  Ref_5x5_50th:   50th percentile
+        
+    7)  Ref_5x5_90th:   90th percentile
+        
+    8)  RefComposite:  Maximum reflectivity in the vertical column above gauge.  In dBZ.
+        
+    9)  RefComposite_5x5_10th
+        
+    10)  RefComposite_5x5_50th
+        
+    11)  RefComposite_5x5_90th
+        
+    12)  RhoHV:  Correlation coefficient (unitless)
+        
+    13) RhoHV_5x5_10th
+        
+    14) RhoHV_5x5_50th
+        
+    15) RhoHV_5x5_90th
+        
+    16) Zdr:    Differential reflectivity in dB
+        
+    17) Zdr_5x5_10th
+        
+    18) Zdr_5x5_50th
+        
+    19) Zdr_5x5_90th
+        
+    20) Kdp:  Specific differential phase (deg/km)
+        
+    21) Kdp_5x5_10th
+        
+    22) Kdp_5x5_50th
+        
+    23) Kdp_5x5_90th
+        
+    24) Expected:  Actual gauge observation in mm at the end of the hour.

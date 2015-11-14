@@ -1,0 +1,17 @@
+{
+    "contents" : "library(bigmemory)\nlibrary(foreach)\nlibrary(parallel)\nlibrary(doSNOW)\nlibrary(doMPI)\n\n\nTESTING = F\n\nsink(\"m.txt\")\n\ndoForeach = function(){\n  gc(reset = T)\n  start.time<-proc.time()\n  m = matrix(byrow = T, nrow = n)\n  x = train[1:n, ]\n  \n  m = foreach(i = 1:n) %do% {\n    sum(x[, \"Id\"] == i)\n  }\n  end.time<-proc.time()\n  save.time<-end.time-start.time\n  cat(\"FOREACH >> Number of minutes running:\", save.time[3]/60, \"\\n\")\n  \n   return(save.time[3])\n}\n\ndoForeachMulticore = function(){\n  numParallelCores = max(1, detectCores())\n  cl = makeCluster(rep(\"localhost\", numParallelCores), type = \"SOCK\")\n  registerDoSNOW(cl)\n  \n  gc(reset = T)\n  start.time<-proc.time()\n  m = matrix(byrow = T, nrow = n)\n  x = train[1:n, ]\n  \n  m = foreach(i = 1:n) %dopar% {\n    sum(x[, \"Id\"] == i)\n  }\n  end.time<-proc.time()\n  save.time<-end.time-start.time\n  cat(\"FOREACH_MC >> Number of minutes running:\", save.time[3]/60, \"\\n\")\n  \n  return(save.time[3])\n}\n\ndoForeachMutlicoreMultiSystem = function(){\n  # create and register a doMPI cluster if necessary\n  if (!identical(getDoParName(), 'doMPI')) {\n    cl <- startMPIcluster()\n    registerDoMPI(cl)\n  }\n  \n  gc(reset = T)\n  start.time<-proc.time()\n  m = matrix(byrow = T, nrow = n)\n  x = train[1:n, ]\n  \n  m = foreach(i = 1:n) %dopar% {\n    sum(x[, \"Id\"] == i)\n  }\n  end.time<-proc.time()\n  save.time<-end.time-start.time\n  cat(\"FOREACH_MCMS >> Number of minutes running:\", save.time[3]/60, \"\\n\")\n  \n  return(save.time[3])\n}\n\n\nif (!exists(\"train\"))\n  train = attach.big.matrix(\"/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/rainTrain.desc\") \n\nnoOfRowsUsedVector = c(10, 100, 1000, 10000)\nresults = matrix(byrow = T, ncol = 4 , c(noOfRowsUsedVector[1], NA, NA, NA\n                         , noOfRowsUsedVector[2], NA, NA, NA\n                         , noOfRowsUsedVector[3], NA, NA, NA\n                         , noOfRowsUsedVector[4], NA, NA, NA\n                        ))\ncolnames(results) = c(\"n\", \"foreach\", \"foreach_mc\", \"foreach_mcms\")\n\n\nfor(n in noOfRowsUsedVector){\n  cat(\"Number of rows: \", n, \"\\n\")\n\n  ## FOREACH\n  results[results[,\"n\"] == n, \"foreach\"] = doForeach()\n  gc()\n\n  ## FOREACH Multicore\n  # Multicore\n  results[results[,\"n\"] == n, \"foreach_mc\"] = doForeachMulticore()\n  gc()\n  \n  ## FOREACH Multicore Mutli-System\n  results[results[,\"n\"] == n, \"foreach_mcms\"] = doForeachMutlicoreMultiSystem()\n  gc()\n\n}\n\nresults",
+    "created" : 1447081275228.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4036455374",
+    "id" : "D8119012",
+    "lastKnownWriteTime" : 1447083165,
+    "path" : "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Code/Raw/benchmarkingForeach_normal_mc_mcms.r",
+    "project_path" : "Code/Raw/benchmarkingForeach_normal_mc_mcms.r",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
