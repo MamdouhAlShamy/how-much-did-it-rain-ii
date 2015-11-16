@@ -1,0 +1,265 @@
+---
+title: "Summary"
+author: "mms"
+date: "November 2, 2015"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+![plot of chunk exp/Id](Figures/Raw/exp/Id.png) 
+```
+ "Id  has ZERO NA "  
+    Min.  1st Qu. Median  Mean    3rd Qu. Max.
+    1     296900  592200  592300  889600  1181000
+ 
+  Number of minutes running: 2.468533 
+```
+***
+
+![plot of chunk exp/minutes_past](Figures/Raw/exp/minutes_past.png) 
+```
+    "minutes_past  has ZERO NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.00   15.00   30.00   29.52   44.00   59.00 
+ 
+  Number of minutes running: 4.927433 
+```
+***
+
+![plot of chunk exp/radardist_km](Figures/Raw/exp/radardist_km.png)
+```
+ [1] "radardist_km  has ZERO NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.00    9.00   11.00   11.07   14.00   21.00 
+ 
+  Number of minutes running: 7.830183 
+```
+***
+
+![plot of chunk exp/Ref](Figures/Raw/exp/Ref.png)
+```
+ [1] "Ref  has :  7415826  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -31      16      22      23      29      71 7415826 
+ 
+  Number of minutes running: 10.2239 
+```
+
+***
+
+![plot of chunk exp/Ref_5x5_10th](Figures/Raw/exp/Ref_5x5_10th.png)
+```
+ [1] "Ref_5x5_10th  has :  8481213  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -32      14      20      20      26      62 8481213 
+ 
+  Number of minutes running: 12.49953 
+```
+
+***
+
+![plot of chunk exp/Ref_5x5_50th](Figures/Raw/exp/Ref_5x5_50th.png)
+```
+ [1] "Ref_5x5_50th  has :  7408719  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -32      16      22      22      29      69 7408719 
+ 
+  Number of minutes running: 14.8848
+```
+
+***
+
+![plot of chunk exp/Ref_5x5_90th](Figures/Raw/exp/Ref_5x5_90th.png)
+```
+
+ [1] "Ref_5x5_90th  has :  6213920  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -28      18      25      26      33      72 6213920 
+ 
+  Number of minutes running: 17.40182 
+
+```
+
+***
+
+![plot of chunk exp/RefComposite](Figures/Raw/exp/RefComposite.png)
+```
+ [1] "RefComposite  has :  7048858  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -32      17      24      24      31      92 7048858 
+ 
+  Number of minutes running: 19.84342 
+
+```
+
+***
+
+![plot of chunk exp/RefComposite_5x5_10th](Figures/Raw/exp/RefComposite_5x5_10th.png)
+```
+ [1] "RefComposite_5x5_10th  has :  8009528  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -31      16      22      22      28      66 8009528 
+ 
+  Number of minutes running: 22.28555 
+
+```
+
+***
+
+![plot of chunk exp/RefComposite_5x5_50th](Figures/Raw/exp/RefComposite_5x5_50th.png)
+```
+ [1] "RefComposite_5x5_50th  has :  7053538  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -27      17      24      24      31      71 7053538 
+ 
+  Number of minutes running: 24.6441 
+
+```
+
+***
+
+![plot of chunk exp/RefComposite_5x5_90th](Figures/Raw/exp/RefComposite_5x5_90th.png)
+```
+ [1] "RefComposite_5x5_90th  has :  5935998  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -25      19      27      27      35      93 5935998 
+ 
+  Number of minutes running: 27.28668 
+
+```
+
+***
+
+![plot of chunk exp/RhoHV](Figures/Raw/exp/RhoHV.png)
+```
+ [1] "RhoHV  has :  8830285  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+       0       0       0       0       1       1 8830285 
+ 
+  Number of minutes running: 29.56905 
+
+```
+
+***
+
+![plot of chunk exp/RhoHV_5x5_10th](Figures/Raw/exp/RhoHV_5x5_10th.png)
+```
+ [1] "RhoHV_5x5_10th  has :  9632047  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+       0       0       0       0       0       1 9632047 
+ 
+  Number of minutes running: 31.6791 
+
+```
+
+***
+
+![plot of chunk exp/RhoHV_5x5_50th](Figures/Raw/exp/RhoHV_5x5_50th.png)
+```
+ [1] "RhoHV_5x5_50th  has :  8828633  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+       0       0       0       0       0       1 8828633 
+ 
+  Number of minutes running: 34.99892 
+
+```
+
+***
+
+![plot of chunk exp/RhoHV_5x5_90th](Figures/Raw/exp/RhoHV_5x5_90th.png)
+```
+ [1] "RhoHV_5x5_90th  has :  7859617  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+       0       0       1       1       1       1 7859617 
+ 
+  Number of minutes running: 37.38105 
+
+```
+
+***
+
+![plot of chunk exp/Zdr](Figures/Raw/exp/Zdr.png)
+```
+ [1] "Zdr  has :  8830285  NA "
+    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      -7       0       0       0       1       7 8830285 
+ 
+  Number of minutes running: 39.82278
+```
+***
+
+
+![plot of chunk exp/Zdr_5x5_10th](Figures/Raw/exp/Zdr_5x5_10th.png)
+```
+[1] "Zdr_5x5_10th has : 9632047 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -7      -1       0       0       0       7 9632047 
+```
+
+***
+
+![plot of chunk exp/Zdr_5x5_50th](Figures/Raw/exp/Zdr_5x5_50th.png)
+```
+[1] "Zdr_5x5_50th has : 8828633 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -7       0       0       0       0       7 8828633
+```
+
+***
+
+![plot of chunk exp/Zdr_5x5_90th](Figures/Raw/exp/Zdr_5x5_90th.png)
+```
+[1] "Zdr_5x5_90th has : 7859617 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -7       1       1       2       2       7 7859617 
+```
+
+***
+
+![plot of chunk exp/Kdp](Figures/Raw/exp/Kdp.png)
+```
+[1] "Kdp has : 9582566 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -96      -1       0       0       1     179 9582566 
+```
+
+
+***
+
+![plot of chunk exp/Kdp_5x5_10th](Figures/Raw/exp/Kdp_5x5_10th.png)
+```
+[1] "Kdp_5x5_10th has : 10336419 NA"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's 
+     -80       -4       -2       -3       -1        3 10336419 
+```
+
+***
+
+![plot of chunk exp/Kdp_5x5_50th](Figures/Raw/exp/Kdp_5x5_50th.png)
+```
+[1] "Kdp_5x5_50th has : 9577920 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -78       0       0       0       0      12 9577920 
+```
+
+***
+
+![plot of chunk exp/Kdp_5x5_90th](Figures/Raw/exp/Kdp_5x5_90th.png)
+```
+[1] "Kdp_5x5_90th has : 8712425 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   -100       2       3       4       5     144 8712425 
+```
+
+***
+
+![plot of chunk exp/Expected](Figures/Raw/exp/Expected.png)
+```
+[1] "Expected has ZERO NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.0     0.0     1.0   108.3     3.0 33020.0 
+```
