@@ -1,0 +1,219 @@
+---
+title: "Summary"
+author: "mms"
+date: "November 24, 2015"
+output: html_document
+---
+
+
+![plot of chunk exp_ffdf/Id](Figures/Raw/exp_ffdf/exp_Id.png) 
+```
+[1] "Id has ZERO NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      1  296900  592200  592300  889600 1181000 
+```
+***
+
+![plot of chunk exp_ffdf/minutes_past](Figures/Raw/exp_ffdf/exp_minutes_past.png) 
+```
+[1] "minutes_past has ZERO NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   15.00   30.00   29.52   44.00   59.00 
+```
+***
+
+![plot of chunk exp_ffdf/radardist_km](Figures/Raw/exp_ffdf/exp_radardist_km.png)
+```
+[1] "radardist_km has ZERO NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    9.00   11.00   11.07   14.00   21.00 
+```
+***
+
+![plot of chunk exp_ffdf/Ref](Figures/Raw/exp_ffdf/exp_Ref.png)
+```
+[1] "Ref has : 7415826 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -31      16      22      23      30      71 7415826 
+```
+
+***
+
+![plot of chunk exp_ffdf/Ref_5x5_10th](Figures/Raw/exp_ffdf/exp_Ref_5x5_10th.png)
+```
+[1] "Ref_5x5_10th has : 8481213 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -32      14      20      20      26      62 8481213 
+```
+
+***
+
+![plot of chunk exp_ffdf/Ref_5x5_50th](Figures/Raw/exp_ffdf/exp_Ref_5x5_50th.png)
+```
+[1] "Ref_5x5_50th has : 7408719 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -32      16      22      23      29      69 7408719 
+```
+
+***
+
+![plot of chunk exp_ffdf/Ref_5x5_90th](Figures/Raw/exp_ffdf/exp_Ref_5x5_90th.png)
+```
+[1] "Ref_5x5_90th has : 6213920 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -28      18      26      26      34      72 6213920
+```
+
+***
+
+![plot of chunk exp_ffdf/RefComposite](Figures/Raw/exp_ffdf/exp_RefComposite.png)
+```
+[1] "RefComposite has : 7048858 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -32      18      24      25      32      92 7048858 
+```
+
+***
+
+![plot of chunk exp_ffdf/RefComposite_5x5_10th](Figures/Raw/exp_ffdf/exp_RefComposite_5x5_10th.png)
+```
+[1] "RefComposite_5x5_10th has : 8009528 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -31      16      22      22      28      66 8009528 
+```
+
+***
+
+![plot of chunk exp_ffdf/RefComposite_5x5_50th](Figures/Raw/exp_ffdf/exp_RefComposite_5x5_50th.png)
+```
+[1] "RefComposite_5x5_50th has : 7053538 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -28      18      24      24      32      71 7053538 
+```
+
+***
+
+![plot of chunk exp_ffdf/RefComposite_5x5_90th](Figures/Raw/exp_ffdf/exp_RefComposite_5x5_90th.png)
+```
+[1] "RefComposite_5x5_90th has : 5935998 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -25      20      27      27      35      94 5935998 
+```
+
+***
+
+![plot of chunk exp_ffdf/RhoHV](Figures/Raw/exp_ffdf/exp_RhoHV.png)
+```
+[1] "RhoHV has : 8830285 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0       1       1       1       1       1 8830285 
+```
+
+***
+
+![plot of chunk exp_ffdf/RhoHV_5x5_10th](Figures/Raw/exp_ffdf/exp_RhoHV_5x5_10th.png)
+```
+[1] "RhoHV_5x5_10th has : 9632047 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0       1       1       1       1       1 9632047 
+```
+
+***
+
+![plot of chunk exp_ffdf/RhoHV_5x5_50th](Figures/Raw/exp_ffdf/exp_RhoHV_5x5_50th.png)
+```
+[1] "RhoHV_5x5_50th has : 8828633 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0       1       1       1       1       1 8828633
+```
+
+***
+
+![plot of chunk exp_ffdf/RhoHV_5x5_90th](Figures/Raw/exp_ffdf/exp_RhoHV_5x5_90th.png)
+```
+[1] "RhoHV_5x5_90th has : 7859617 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0       1       1       1       1       1 7859617 
+```
+
+***
+
+![plot of chunk exp_ffdf/Zdr](Figures/Raw/exp_ffdf/exp_Zdr.png)
+```
+[1] "Zdr has : 8830285 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -8       0       0       1       1       8 8830285 
+```
+***
+
+
+![plot of chunk exp_ffdf/Zdr_5x5_10th](Figures/Raw/exp_ffdf/exp_Zdr_5x5_10th.png)
+```
+[1] "Zdr_5x5_10th has : 9632047 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -8      -1      -1      -1       0       8 9632047 
+```
+
+***
+
+![plot of chunk exp_ffdf/Zdr_5x5_50th](Figures/Raw/exp_ffdf/exp_Zdr_5x5_50th.png)
+```
+[1] "Zdr_5x5_50th has : 8828633 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -8       0       0       0       1       8 8828633 
+```
+
+***
+
+![plot of chunk exp_ffdf/Zdr_5x5_90th](Figures/Raw/exp_ffdf/exp_Zdr_5x5_90th.png)
+```
+[1] "Zdr_5x5_90th has : 7859617 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     -8       1       2       2       3       8 7859617 
+```
+
+***
+
+![plot of chunk exp_ffdf/Kdp](Figures/Raw/exp_ffdf/exp_Kdp.png)
+```
+[1] "Kdp has : 9582566 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -96      -1       0       0       2     180 9582566 
+```
+
+
+***
+
+![plot of chunk exp_ffdf/Kdp_5x5_10th](Figures/Raw/exp_ffdf/exp_Kdp_5x5_10th.png)
+```
+[1] "Kdp_5x5_10th has : 10336419 NA"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's 
+     -81       -5       -3       -3       -2        4 10336419 
+```
+
+***
+
+![plot of chunk exp_ffdf/Kdp_5x5_50th](Figures/Raw/exp_ffdf/exp_Kdp_5x5_50th.png)
+```
+[1] "Kdp_5x5_50th has : 9577920 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    -79      -1       0       0       0      13 9577920 
+```
+
+***
+
+![plot of chunk exp_ffdf/Kdp_5x5_90th](Figures/Raw/exp_ffdf/exp_Kdp_5x5_90th.png)
+```
+[1] "Kdp_5x5_90th has : 8712425 NA"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   -100       2       4       4       6     145 8712425 
+```
+
+***
+
+![plot of chunk exp_ffdf/exp_ffdfected](Figures/Raw/exp_ffdf/exp_Expected.png)
+```
+[1] "Expected has ZERO NA"
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    0.01     0.25     1.02   108.60     3.81 33020.00
+```
