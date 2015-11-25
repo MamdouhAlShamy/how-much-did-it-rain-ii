@@ -4,17 +4,17 @@ require(ggplot2)
 require(grid)
 
 # get data
-load.ffdf(dir="/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Data/Raw/train_ffdf")
+load.ffdf(dir="/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Data/Raw/test_ffdf")
   
 summaryStatisticPlotting = function(i, histo = TRUE, box = TRUE){
   # start.log()
-  featureName = colnames(train)[i]
-  feature_df <<- data.frame(featureName = train[, i])
+  featureName = colnames(test)[i]
+  feature_df <<- data.frame(featureName = test[, i])
   featureSummary = summary(feature_df$featureName)
   featureLimits = c(min(feature_df$featureName) , max(feature_df$featureName))
   print("data frame loaded")
 
-  png(paste0("Figures/Raw/exp_ffdf/exp_", featureName,".png", sp = ""))
+  png(paste0("Figures/Raw/test_ffdf/test_", featureName,".png", sp = ""))
   # tiff(paste0("Figures/Raw/exp_ffdf/exp_", featureName,".tiff", sp = ""), compression = "lzw")
 
   # define grid
@@ -74,11 +74,11 @@ summaryStatisticPlotting = function(i, histo = TRUE, box = TRUE){
 }
 
 dataInNumbers = function(i){
-  featureName = colnames(train)[i]
+  featureName = colnames(test)[i]
   # no of NA's
-  if (any(is.na(train[, i]))) {
+  if (any(is.na(test[, i]))) {
     print(paste0(featureName, " has : ", sum(is.na(
-      train[, i]
+      test[, i]
     )), " NA", sp = ""))
     
   }else{
@@ -86,5 +86,5 @@ dataInNumbers = function(i){
   }
   
   # summary
-  print(summary(train[, i]))
+  print(summary(test[, i]))
 }
