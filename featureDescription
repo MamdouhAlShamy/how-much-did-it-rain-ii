@@ -61,3 +61,15 @@ The columns in the datasets are:
     23) Kdp_5x5_90th
         
     24) Expected:  Actual gauge observation in mm at the end of the hour.
+
+
+Number of rows
+----------------
+
+train               13,765,201
+trainCleaned        6,349,375
+trainCleanedCompact 731,556
+
+test                8,022,756
+testCleaned         3,663,128
+testCleanedCompact  426,094
