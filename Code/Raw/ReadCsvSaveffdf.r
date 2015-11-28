@@ -11,3 +11,8 @@ readCsvSaveffdf = function(src, dest){
 	save.ffdf(data, dir=paste0(dataPath, dest))	
 }
 
+readData = function(src){
+	load.ffdf(dir = paste0(dataPath, src) )
+	return(data)
+}
+

@@ -14,4 +14,4 @@ source(paste0(codePath, "SummaryStatistics.r"))
 
 # nrow(readData("testCleanedCompact"))
 
-getCorrelation()
+# getCorrelation("trainCleanedCompact", 3:4, 24)
