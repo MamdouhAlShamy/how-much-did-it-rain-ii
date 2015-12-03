@@ -74,7 +74,7 @@ compactObservationsToOneRow = function(src, dest){
 			, Kdp_5x5_10th = mean(Kdp_5x5_10th, na.rm = T)
 			, Kdp_5x5_50th = mean(Kdp_5x5_50th, na.rm = T)
 			, Kdp_5x5_90th = mean(Kdp_5x5_90th, na.rm = T)
-			# , Expected = mean(Expected, na.rm = T)
+			, Expected = mean(Expected, na.rm = T)
 			)
 
 	save.ffdf(data, dir = paste0(dataPath, dest))
@@ -92,9 +92,32 @@ compactObservationsToOneRow = function(src, dest){
 
 
  replaceNaForEachFeatureWithItsMean = function(src, dest){
- 	#read
+ 	load.ffdf(dir = paste0(dataPath, src) )
+ 	# readData(src)
 
- 	# get mean for feature
+	# data = read.csv(paste0(dataPath, src))
+
+ 	meanVector = getFeaturesMean(data)
 
  	# replace NA for the feature with its mean
+ 	for(i in 4:(ncol(data)-1)){
+ 		data[, i][ data[, i] %in% NA ] <- meanVector[i]
+ 	}
+
+ 	# save
+ 	save.ffdf(data, dir = paste0(dataPath, dest) )
+ 	# write.csv(data, dest, row.names=FALSE)
+ }
+
+ getFeaturesMean = function(data){
+ 	meanVector = c()
+ 	for(i in 4:(ncol(data) - 1) ){
+ 		meanVector[i] = getFeatureMean(data[, i])
+ 	}
+ 	print(paste0("MeanVector: ", meanVector))
+ 	return(meanVector)
+ }
+
+ getFeatureMean = function(data){
+ 	return(mean(data, na.rm = T))
  }

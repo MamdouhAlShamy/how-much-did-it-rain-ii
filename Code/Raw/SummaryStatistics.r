@@ -127,6 +127,8 @@ getCorrelation = function(src, featuresIndexX, featuresIndexY){
   dev.off()
 }
 
+
+## replaced by python code
 getNumberOfCompletelyPresentFeaures = function(data){
   numberOfCompletelyPresentFeaures = 0
   for(i in 1:nrow(data)){

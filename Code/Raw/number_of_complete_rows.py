@@ -3,6 +3,7 @@
 src = "Data/Raw/trainCleaned.csv"
 dest = "Data/Raw/trainCleanedCompletely.csv" 
 
+src = "Data/Raw/trainIgnoreNATuples.csv"
 
 def getNumberOfCompleteFeaturesRows(src):
 	numberOfCompleteFeaturesRows = 0
@@ -24,5 +25,5 @@ def removeUncompleteFeaturesRows(src, dest):
 
 
 if __name__ == "__main__":
-	x = removeUncompleteFeaturesRows(src, dest)
+	x = getNumberOfCompleteFeaturesRows(src)
 	print(x)
