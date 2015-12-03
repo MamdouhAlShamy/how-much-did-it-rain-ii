@@ -1,0 +1,38 @@
+[1] "Expected ~ Ref + Ref_5x5_10th"
+[1] 0.0001753236
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th"
+[1] 0.0007586243
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th"
+[1] 0.0008394616
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th"
+[1] 0.0009530207
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th"
+[1] 0.0009537132
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th"
+[1] 0.0006762292
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp"
+[1] 0.0007577106
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th"
+[1] 0.0006092736
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th"
+[1] 0.0006366881
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite"
+[1] 0.0006373048
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th"
+[1] 0.0006957729
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th"
+[1] 0.000717144
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th + RefComposite_5x5_50th"
+[1] 0.0007234975
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th + RefComposite_5x5_50th + Kdp_5x5_50th"
+[1] 0.0007261125
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th + RefComposite_5x5_50th + Kdp_5x5_50th + Zdr_5x5_10th"
+[1] 0.0007271554
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th + RefComposite_5x5_50th + Kdp_5x5_50th + Zdr_5x5_10th + Ref_5x5_50th"
+[1] 0.000727558
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th + RefComposite_5x5_50th + Kdp_5x5_50th + Zdr_5x5_10th + Ref_5x5_50th + Zdr"
+[1] 0.0007278025
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th + RefComposite_5x5_50th + Kdp_5x5_50th + Zdr_5x5_10th + Ref_5x5_50th + Zdr + RefComposite_5x5_90th"
+[1] 0.0007280286
+[1] "Expected ~ Ref + Ref_5x5_10th + RefComposite_5x5_10th + RhoHV_5x5_50th + RhoHV_5x5_90th + Zdr_5x5_90th + Kdp_5x5_90th + Kdp + Kdp_5x5_10th + RhoHV_5x5_10th + RefComposite + Ref_5x5_90th + Zdr_5x5_50th + RefComposite_5x5_50th + Kdp_5x5_50th + Zdr_5x5_10th + Ref_5x5_50th + Zdr + RefComposite_5x5_90th + RhoHV"
+[1] 0.0007280617

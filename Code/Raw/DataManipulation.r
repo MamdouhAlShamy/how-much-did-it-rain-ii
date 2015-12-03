@@ -16,6 +16,34 @@ removeEmptyRef = function(src, dest ){
 
 }
 
+removeEmptyFeature = function(src, dest){
+	load.ffdf(dir = paste0(dataPath, src) )
+
+	data = data %>% 
+		filter(!is.na(Ref_5x5_10th)
+			&& !is.na(Ref_5x5_50th)
+			&& !is.na(Ref_5x5_90th)
+			&& !is.na(RefComposite_5x5_10th)
+			&& !is.na(RefComposite_5x5_50th)
+			&& !is.na(RefComposite_5x5_90th)
+			&& !is.na(RhoHV)
+			&& !is.na(RhoHV_5x5_10th)
+			&& !is.na(RhoHV_5x5_50th)
+			&& !is.na(RhoHV_5x5_90th)
+			&& !is.na(Zdr)
+			&& !is.na(Zdr_5x5_10th)
+			&& !is.na(Zdr_5x5_50th)
+			&& !is.na(Zdr_5x5_90th)
+			&& !is.na(Kdp)
+			&& !is.na(Kdp_5x5_10th)
+			&& !is.na(Kdp_5x5_50th)
+			&& !is.na(Kdp_5x5_90th)
+			)
+
+	save.ffdf(data, dir=paste0(dataPath, dest) )
+
+}
+
 compactObservationsToOneRow = function(src, dest){
 	load.ffdf(dir = paste0(dataPath, src) )
 	
@@ -46,7 +74,7 @@ compactObservationsToOneRow = function(src, dest){
 			, Kdp_5x5_10th = mean(Kdp_5x5_10th, na.rm = T)
 			, Kdp_5x5_50th = mean(Kdp_5x5_50th, na.rm = T)
 			, Kdp_5x5_90th = mean(Kdp_5x5_90th, na.rm = T)
-			, Expected = mean(Expected, na.rm = T)
+			# , Expected = mean(Expected, na.rm = T)
 			)
 
 	save.ffdf(data, dir = paste0(dataPath, dest))
@@ -60,4 +88,13 @@ compactObservationsToOneRow = function(src, dest){
 
 	save.ffdf(data, dir=paste0(dataPath, dest) )
 
+ }
+
+
+ replaceNaForEachFeatureWithItsMean = function(src, dest){
+ 	#read
+
+ 	# get mean for feature
+
+ 	# replace NA for the feature with its mean
  }

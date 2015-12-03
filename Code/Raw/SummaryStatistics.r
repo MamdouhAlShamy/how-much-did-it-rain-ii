@@ -126,3 +126,14 @@ getCorrelation = function(src, featuresIndexX, featuresIndexY){
 
   dev.off()
 }
+
+getNumberOfCompletelyPresentFeaures = function(data){
+  numberOfCompletelyPresentFeaures = 0
+  for(i in 1:nrow(data)){
+    if(any(is.na(data[i,]))){
+      numberOfCompletelyPresentFeaures = numberOfCompletelyPresentFeaures + 1
+    }
+  }
+
+  return(numberOfCompletelyPresentFeaures)
+}

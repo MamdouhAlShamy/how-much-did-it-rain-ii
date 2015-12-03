@@ -66,10 +66,24 @@ The columns in the datasets are:
 Number of rows
 ----------------
 
-train               13,765,201
-trainCleaned        6,349,375
-trainCleanedCompact 731,556
+train                   13,765,201
+trainCleaned            6,349,375   # When Ref is NA removed row
+trainCleanedCompact     731,556     # groupBy Id then average each feature in the group
+trainIgnoreNATuples     2,769,088   # any row has missing feature removed "ignoring Tuple"
 
-test                8,022,756
-testCleaned         3,663,128
-testCleanedCompact  426,094
+test                    8,022,756
+testCleaned             3,663,128
+testCleanedCompact      426,094
+testCompact         
+
+
+
+
+Best R$sq
+------------
+
+| data                | Used features       | R$sq         |
+|---------------------|---------------------|--------------|
+| trainCleanedCompact | trainCleanedCompact | 0.0009537132 |
+|---------------------|---------------------|--------------|
+| trainIgnoreNATuples | 4:23                | 0.0004281174
