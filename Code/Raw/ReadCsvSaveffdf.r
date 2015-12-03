@@ -16,3 +16,11 @@ readData = function(src){
 	return(data)
 }
 
+readffdfSaveCsv = function(src, dest){
+	data = readData(src)
+	write.csv(data, paste0(dataPath, dest, ".csv"), row.names=FALSE)
+}
+
+saveCsv = function(data, dest){
+	write.csv(data, paste0(dataPath, dest, ".csv"), row.names=FALSE)
+}

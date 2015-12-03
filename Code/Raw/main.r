@@ -1,10 +1,23 @@
 #main.r
 codePath = "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Code/Raw/"
 source(paste0(codePath, "ReadCsvSaveffdf.r"))
-# source(paste0(codePath, "DataManipulation.r"))
+source(paste0(codePath, "DataManipulation.r"))
 source(paste0(codePath, "Regression.r"))
-# source(paste0(codePath, "SummaryStatistics.r"))
-# source(paste0(codePath, "MissingValues.r"))
+source(paste0(codePath, "SummaryStatistics.r"))
+source(paste0(codePath, "MissingValues.r"))
+# source(paste0(codePath, "Test.r"))
+
+
+
+
+trainData = readData("trainCleanedMeanedCompact")
+testData = readData("testCleanedMeanedCompact")
+model = learnrReg3(4:23, trainData)
+res = pred3(model, testData)
+saveCsv(cbind(testData[,1], res), "res")
+
+
+# write.csv(testData, "testCleanedMeanedCompact.csv", row.names=FALSE)
 
 # compactObservationsToOneRow("test", "testCompact")
 # print(readData("trainPart"))
@@ -81,6 +94,14 @@ source(paste0(codePath, "Regression.r"))
 
 
 # data = readData("trainCleanedMeanedCompact")
-df = data.frame(Id = c(1,2,3,4), v = c(1,5,10,15), exp = c(22,33,44,55))
-reg3(data)
 
+
+# replaceNaForEachFeatureWithItsMean("testCleaned", "testCleanedMeaned")
+# compactObservationsToOneRow("testCleanedMeaned", "testCleanedMeanedCompact")
+
+# trainData = data.frame(Id = c(1,2,3,4), v = c(1,5,10,15), b = c(5,8,12,14), Expected = c(22,33,44,55))
+# testData = data.frame(Id = c(46,45,47,67,12), v = c(3,7,12,20,24), b = c(100, 120, 140, 160, 199))
+# testData$Expected <- 0
+# res = reg3(2:3, trainData, testData)
+# print(cbind(testData[, 1 ], res))
+# write.csv(res, paste0(dataPath, "res.csv"), row.names=FALSE)

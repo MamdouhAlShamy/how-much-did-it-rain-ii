@@ -1,15 +1,15 @@
 #!/usr/bin/python
 
-src = "Data/Raw/trainCleaned.csv"
+src = "Data/Raw/testCleanedMeanedCompact.csv"
 dest = "Data/Raw/trainCleanedCompletely.csv" 
 
-src = "Data/Raw/trainIgnoreNATuples.csv"
+# src = "Data/Raw/trainIgnoreNATuples.csv"
 
 def getNumberOfCompleteFeaturesRows(src):
 	numberOfCompleteFeaturesRows = 0
 	with open(src) as f:
 		for line in f:
-			if "NA" in line:
+			if "NA" not in line:
 				numberOfCompleteFeaturesRows += 1
 
 	return numberOfCompleteFeaturesRows
