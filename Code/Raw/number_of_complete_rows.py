@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-src = "Data/Raw/testCleanedMeanedCompact.csv"
+src = "Data/Raw/trainCleanedMeanedCompact.csv"
 dest = "Data/Raw/trainCleanedCompletely.csv" 
 
 # src = "Data/Raw/trainIgnoreNATuples.csv"

@@ -1,20 +1,25 @@
 #main.r
 codePath = "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Code/Raw/"
 source(paste0(codePath, "ReadCsvSaveffdf.r"))
-source(paste0(codePath, "DataManipulation.r"))
+# source(paste0(codePath, "DataManipulation.r"))
 source(paste0(codePath, "Regression.r"))
-source(paste0(codePath, "SummaryStatistics.r"))
-source(paste0(codePath, "MissingValues.r"))
+# source(paste0(codePath, "SummaryStatistics.r"))
+# source(paste0(codePath, "MissingValues.r"))
 # source(paste0(codePath, "Test.r"))
 
-
-
-
 trainData = readData("trainCleanedMeanedCompact")
-testData = readData("testCleanedMeanedCompact")
-model = learnrReg3(4:23, trainData)
-res = pred3(model, testData)
-saveCsv(cbind(testData[,1], res), "res")
+RegressionType = "quasipoisson"
+print(paste("RegressionType: ", RegressionType))
+m = regression(4:23, RegressionType, trainData)
+print(m)
+
+
+
+# trainData = readData("trainCleanedMeanedCompact")
+# testData = readData("testCleanedMeanedCompact")
+# model = learnrReg3(4:23, trainData)
+# res = pred3(model, testData)
+# saveCsv(cbind(testData[,1], res), "res")
 
 
 # write.csv(testData, "testCleanedMeanedCompact.csv", row.names=FALSE)
