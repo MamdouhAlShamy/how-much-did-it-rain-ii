@@ -7,11 +7,33 @@ source(paste0(codePath, "Regression.r"))
 # source(paste0(codePath, "MissingValues.r"))
 # source(paste0(codePath, "Test.r"))
 
-trainData = readData("trainCleanedMeanedCompact")
-RegressionType = "quasipoisson"
-print(paste("RegressionType: ", RegressionType))
-m = regression(4:23, RegressionType, trainData)
-print(m)
+
+# normalizeData("trainCleanedMeanedCompact", "trainCleanedMeanedCompactNormalizedZScore")
+
+
+## Neural Network
+# train = readData("trainCleanedMeanedCompactNormalizedZScore")
+# hiddenLayersParameters = 2
+# featuresUsed = 4:23
+# rep = 6
+# neuralNetwork(featuresUsed, hiddenLayersParameters, rep, train)
+
+# readCsvSaveffdf("trainCleanedMeanedCompactPart", "trainCleanedMeanedCompactPart")
+
+
+## Regression 
+src = "trainCleanedMeanedCompactNormalizedZScore"
+# RegressionType = "gaussian"
+# featuresUsed = 4:23
+
+train = readData(src)
+# form = paste("Expected", "~", paste(paste0("", colnames(train)[featuresUsed], ""), collapse = " + "))
+
+# print(paste("RegressionType: ", RegressionType))
+# regression(form, RegressionType, train)
+
+model = readRDS("regressionModel.rds")
+measureModelPerformance(model, train[, 24])
 
 
 

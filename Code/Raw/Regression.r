@@ -1,4 +1,5 @@
 suppressMessages(library(biglm))
+suppressMessages(library(neuralnet))
 
 order = c(4, 5, 9, 14, 15, 19, 23, 20, 21, 13, 8, 7, 18, 10, 22, 17, 6, 16, 11, 12)
 
@@ -49,23 +50,34 @@ pred3 = function(model, test){
 }
 
 
-regression = function(featuresUsed, type, train){
+regressionMultipleForms = function(featuresUsed, type, train){
 	for(i in featuresUsed){
+		
 		form = paste("Expected", "~", paste(paste0("", colnames(train)[featuresUsed[1]:i], ""), collapse = " + "))
 		print(form)
 
-		model = glm(data = train
-				, formula= as.formula(form)
-				, family = type
-				)
-		y_predicted = predict(model)
-		y = train[, 24]
-		metric = getRegressionMetric(y, y_predicted)
-		print(paste("Rsq: ", metric$Rsq))
-		print(paste("RMSE: ", metric$RMSE))
-		print("----------------------------------------------------")
+		regression(form, type, train)
 	}
 	return("NONE")
+}
+
+regression = function(form, type, train){	
+	model = glm(data = train
+			, formula= as.formula(form)
+			, family = type
+			)
+	modelObjectName = "regressionModel.rds"
+	saveRDS(model, modelObjectName)
+	print(paste(modelObjectName, " created"))
+}
+
+measureModelPerformance = function(model, y){
+	y_predicted = predict(model)
+
+	metric = getRegressionMetric(y, y_predicted)
+	print(paste("Rsq: ", metric$Rsq))
+	print(paste("RMSE: ", metric$RMSE))
+	print("----------------------------------------------------")
 }
 
 func = function(featuresUsed, train){
@@ -97,13 +109,36 @@ func = function(featuresUsed, train){
 }
 
 
+neuralNetwork = function(featuresUsed, hiddenLayersParameters, rep, train){
+	form = paste("Expected", "~", paste(paste0("", colnames(train)[featuresUsed], ""), collapse = " + "))
+	print(form)
+
+	print("Modelling")
+	model = neuralnet(data = train
+						, formula = as.formula(form)
+						, hidden = hiddenLayersParameters
+					)
+	# plot(model)
+	print("Getting y_predicted")
+	y_predicted = as.vector(compute(model, train[, featuresUsed])$net.result)
+	y = train[, 24]
+
+	print("Getting Metric")
+	metric = getRegressionMetric(y, y_predicted, rep = rep)
+	print(paste("Rsq: ", metric$Rsq))
+	print(paste("RMSE: ", metric$RMSE))	
+
+}
+
 getRegressionMetric = function(y, y_predicted){
-	res = y - y_predicted
 	n = length(y)
+	# print(n)
+	res = y - y_predicted	
 	SSres = sum((res)^2)
 	SStot = sum((y - mean(y))^2)
 	Rsq = 1 - (SSres/SStot)	
-	RMSE = sqrt(SSres/n)	
-	metric = list(RMSE = RMSE, Rsq = Rsq, SStot = SStot, SSres = SSres, n = n, res = res)
+	RMSE = sqrt(SSres/n)
+	Rsq2 <- cor(y,y_predicted)^2	
+	metric = list(RMSE = RMSE, Rsq = Rsq, Rsq2 = Rsq2, SStot = SStot, SSres = SSres, n = n)
 	return(metric)
 }

@@ -154,3 +154,26 @@ compactObservationsToOneRow = function(src, dest, TRAIN){
  getFeatureMean = function(data){
  	return(mean(data, na.rm = T))
  }
+
+normalizeData = function(src, dest){
+	load.ffdf(dir = paste0(dataPath, src) )
+
+	# maxs = as.vector(unlist(lapply(physical(data), max)))
+	# mins = as.vector(unlist(lapply(physical(data), min)))
+
+	# data_df = as.data.frame(data)
+	# maxs = apply(data_df[, -1:-3], 2, max)
+	# mins = apply(data_df[, -1:-3], 2, min)
+
+	# for(i in 1:length(maxs)){
+		# print(maxs[i])
+		# print(mins[i])
+	# }
+
+	# print(maxs)
+	# print(mins)
+	data[, -1:-3] = scale(data[, -1:-3], center = T,scale = T)
+	# print(data_scaled)
+	save.ffdf(data, dir=paste0(dataPath, dest) )
+
+}

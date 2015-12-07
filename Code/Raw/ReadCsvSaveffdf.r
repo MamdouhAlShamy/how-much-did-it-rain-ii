@@ -4,7 +4,7 @@ suppressMessages(library(ffbase))
 dataPath = "/media/mms/HomeLand/Know/DataAnalysisProjects/HowMuchDidItRainII/Data/Raw/"
 
 readCsvSaveffdf = function(src, dest){
-	data <-  read.csv.ffdf(file =paste0(dataPath, src)
+	data <-  read.csv.ffdf(file =paste0(dataPath, src, ".csv")
 						, header = T
 						, VERBOSE=TRUE)
 
